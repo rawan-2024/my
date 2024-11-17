@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showSection(sectionId) {
+            // إخفاء جميع الأقسام
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // عرض القسم المطلوب فقط
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        }
+
+        // عرض القسم الأولي (home) عند تحميل الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+                <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- الصفحة الرئيسية -->
+        <section id="home" class="content-section">
+            <h2>Home</h2>
+            <p>Welcome to my portfolio website! Here, you can learn more about me and my work.</p>
+        </section>
+
+        <!-- صفحة "About Me" -->
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <!-- إضافة صورة -->
+            <img src="Your.jpg" alt="Your Photo" style="width:150px; height:150px;">
+            <p>Hi, I'm [Rawan Alhasoon], a web developer skilled in HTML, CSS, and JavaScript.</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+
+        <!-- صفحة المشاريع -->
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <ul>
+                <li>Project 1: <a href="#">View Project</a></li>
+                <li>Project 2: <a href="#">View Project</a></li>
+            </ul>
+        </section>
+
+        <!-- صفحة الاتصال -->
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ترويسة الموقع */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: #444;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* الأقسام */
+.content-section {
+    display: none; /* إخفاء جميع الأقسام افتراضيًا */
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#home {
+    display: block; /* إظهار الصفحة الرئيسية عند التحميل */
+}
+
+/* العناوين */
+h2 {
+    color: #444;
+}
+
+/* صورة صفحة "About Me" */
+#about img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 50%;
+    border: 3px solid #333;
+}
+
+/* قائمة المشاريع */
+#projects ul {
+    list-style: none;
+    padding: 0;
+}
+
+#projects ul li {
+    margin: 10px 0;
+}
+
+#projects ul li a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#projects ul li a:hover {
+    text-decoration: underline;
+}
+
+/* نموذج الاتصال */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+/* التذييل */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
